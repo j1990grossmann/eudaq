@@ -200,7 +200,7 @@ namespace eudaq {
           sparsePixel->setSignal((int32_t)plane.GetPixel(iPixel));
 
           // Add the pixel to the readout frame:
-          sparseFrame->push_back(*sparsePixel.get());
+          sparseFrame->push_back(*sparsePixel.release());
         }
 
         // Now add the TrackerData to the collection
